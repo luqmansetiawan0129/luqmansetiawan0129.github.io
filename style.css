@@ -120,12 +120,18 @@ p, li {
 
 .btn-primary:hover { opacity: 0.9; }
 .btn-secondary:hover { background: #d1d5db; }
+/* ===== CONTACT SECTION LINK FIX ===== */
+
 #contact a {
-  color: #93c5fd;
-  text-decoration: none;
+  color: #93c5fd;          
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 #contact a:hover {
-  text-decoration: underline;
+  color: #bfdbfe;         
+  text-decoration: none;
 }
+
+
 

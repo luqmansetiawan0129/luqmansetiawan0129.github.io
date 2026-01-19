@@ -120,3 +120,12 @@ p, li {
 
 .btn-primary:hover { opacity: 0.9; }
 .btn-secondary:hover { background: #d1d5db; }
+#contact a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+

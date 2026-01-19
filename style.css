@@ -163,5 +163,71 @@ p, li {
   color: #92400e;
 }
 
+/* =========================
+   LANGUAGE TOGGLE SWITCH
+========================= */
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* Label ID / EN */
+.lang-label {
+  font-weight: 600;
+}
+
+/* Switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+/* Hide checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #475569; /* abu gelap */
+  border-radius: 999px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+/* Knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Checked = EN */
+.switch input:checked + .slider {
+  background-color: #2563eb; /* biru */
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px)
+
 
 

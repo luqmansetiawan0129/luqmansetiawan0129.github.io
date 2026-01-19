@@ -71,31 +71,32 @@ footer {
   padding:15px;
 }
 
-/* CTA BUTTONS */
+/* =========================
+   CTA BUTTON FIX (WAJIB)
+========================= */
+
 .cta {
   margin-top: 24px;
   display: flex;
   gap: 14px;
 }
 
-.btn-primary {
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 6px;
+.cta a {
+  display: inline-block;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: #0f172a;
+  color: #ffffff !important;
 }
 
 .btn-secondary {
   background-color: #e5e7eb;
-  color: #111827;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
+  color: #111827 !important;
 }
 
 .btn-primary:hover {

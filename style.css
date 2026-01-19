@@ -137,5 +137,31 @@ p, li {
   margin-bottom: 20px;
 }
 
+/* ===== SKILL LEVEL BADGE ===== */
+
+.skill-level {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.level-daily {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.level-advanced {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.level-working {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
 
 

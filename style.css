@@ -133,5 +133,9 @@ p, li {
   text-decoration: none;
 }
 
+#skills .card {
+  margin-bottom: 20px;
+}
+
 
 

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Luqman Setiawan | Logistics & Administration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-container">
+  <div class="container nav-flex">
     <div class="logo">Luqman Setiawan</div>
     <ul class="nav-menu">
       <li><a href="#home">Home</a></li>
@@ -19,73 +18,41 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="langToggle">ID</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
-  <h1>Luqman Setiawan</h1>
-  <p class="title">Logistics & Administrative Professional</p>
-  <p class="location">Balikpapan, Indonesia</p>
+  <div class="container hero-grid">
+    <div>
+      <h1 data-en="Luqman Setiawan" data-id="Luqman Setiawan">Luqman Setiawan</h1>
+      <p class="role"
+         data-en="Logistics & Administrative Professional"
+         data-id="Profesional Logistik & Administrasi">
+         Logistics & Administrative Professional
+      </p>
+      <p class="location">Balikpapan, Indonesia</p>
+    </div>
+    <img src="assets/profile.jpg" alt="Luqman Setiawan" class="profile-img"/>
+  </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    Logistics & Administrative Professional with experience in export documentation,
-    SOP compliance, and operational coordination for international shipments
-    (FCA Singapore). Proven in maintaining accuracy, compliance, and smooth
-    operational flow in fast-paced logistics environments.
-  </p>
+  <div class="container">
+    <h2>About Me</h2>
+    <p data-en="Logistics & Administrative Professional with experience in export documentation, SOP compliance, and operational coordination for international shipments (FCA Singapore)."
+       data-id="Profesional Logistik dan Administrasi dengan pengalaman dokumentasi ekspor, kepatuhan SOP, dan koordinasi operasional pengiriman internasional (FCA Singapore).">
+       Logistics & Administrative Professional with experience in export documentation, SOP compliance, and operational coordination for international shipments (FCA Singapore).
+    </p>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" class="section bg-light">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Expeditor – PT Kuehne + Nagel</h3>
-    <span>2025 – Present</span>
-    <ul>
-      <li>Managed export documentation and ensured 100% compliance.</li>
-      <li>Coordinated with vendors, customs brokers, and internal teams.</li>
-      <li>Prepared operational and shipment reports.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Staff Administration & Stock Control – Furion Coffee Shop</h3>
-    <span>2018 – 2021</span>
-    <ul>
-      <li>Handled inventory control and stock reconciliation.</li>
-      <li>Performed routine audits to ensure data accuracy.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <span>Export–Import Documentation</span>
-    <span>SOP Compliance</span>
-    <span>Logistics Coordination</span>
-    <span>Inventory & Stock Control</span>
-    <span>Operational Reporting</span>
-    <span>Microsoft Excel & Office</span>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section bg-dark">
-  <h2>Contact</h2>
-  <p>Email: <strong>lukmansetiawan1998@gmail.com</strong></p>
-  <p>Phone: <strong>+62 82323180317</strong></p>
-</section>
-
-<footer>
-  © 2026 Luqman Setiawan
-</footer>
-
-</body>
-</html>
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Expeditor – PT Kuehne + Nagel</h3>
+      <ul>
+        <li data-en="Handled export documentation with 100% compliance."
+            data-id="Menangani dokumentasi ekspor dengan kepatuhan 100%.">
+            Handled export

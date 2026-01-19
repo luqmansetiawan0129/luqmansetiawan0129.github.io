@@ -9,3 +9,19 @@ toggle.onclick = () => {
     el.textContent = el.dataset[current];
   });
 };
+document.addEventListener("DOMContentLoaded", () => {
+  const langToggle = document.getElementById("langToggle");
+
+  if (!langToggle) return;
+
+  langToggle.addEventListener("change", () => {
+    const lang = langToggle.checked ? "en" : "id";
+
+    document.querySelectorAll("[data-id]").forEach(el => {
+      el.textContent =
+        lang === "id"
+          ? el.dataset.id
+          : el.dataset.en;
+    });
+  });
+});

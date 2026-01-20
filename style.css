@@ -304,3 +304,40 @@ p, li {
   }
 
 }
+
+  /* =========================
+   HERO MOBILE FIX (MATCH HTML)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* FORCE hero jadi 1 kolom */
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Teks hero (div pertama) */
+  .hero-grid > div:first-child {
+    order: 2;
+    width: 100%;
+  }
+
+  /* Foto hero */
+  .profile-img {
+    order: 1;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* CTA */
+  .cta {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+

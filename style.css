@@ -266,8 +266,10 @@ p, li {
     margin-left: auto;
   }
 
-  /* HERO — INI YANG TADI TIDAK KENA */
-  .hero-grid {
+  @media (max-width: 768px) {
+
+  /* HERO FIX — WAJIB ADA .hero .hero-grid */
+  .hero .hero-grid {
     display: flex !important;
     flex-direction: column-reverse !important;
     align-items: center;
@@ -275,76 +277,30 @@ p, li {
     gap: 20px;
   }
 
-  .hero-grid img {
+  .hero .hero-grid img {
     max-width: 220px;
     height: auto;
     margin: 0 auto;
   }
 
-  .hero-grid h1 {
+  .hero .hero-grid h1 {
     font-size: 26px;
     line-height: 1.25;
   }
 
-  .hero-grid .role {
+  .hero .role {
     font-size: 15px;
   }
 
-  .hero-grid .location {
+  .hero .location {
     font-size: 14px;
   }
 
-  .cta {
+  .hero .cta {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
   }
 
-  /* SECTION */
-  .section {
-    padding: 48px 0;
-  }
-
-  h2 {
-    font-size: 22px;
-    margin-bottom: 18px;
-  }
-
-  /* CARD */
-  .card {
-    padding: 16px;
-  }
-
-  .card h3 {
-    font-size: 16px;
-  }
-
-  .card p,
-  .card li {
-    font-size: 14px;
-  }
-
-  /* TIMELINE */
-  .timeline {
-    padding-left: 18px;
-  }
-
-  .timeline-content {
-    padding-left: 10px;
-  }
-
-  /* SKILL BADGE */
-  .skill-level {
-    display: inline-block;
-    margin-top: 6px;
-    margin-left: 0;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    font-size: 13px;
-    padding: 20px 12px;
-  }
 }

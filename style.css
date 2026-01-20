@@ -1,343 +1,284 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; color:#333; }
+/* =========================
+   RESET & BASE
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container { max-width:1100px; margin:auto; padding:0 20px; }
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
 .navbar {
   position: sticky;
   top: 0;
-  background:#0f172a;
-  color:#fff;
+  z-index: 1000;
+  background: #0b1220;
 }
 
 .nav-flex {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
 }
 
-.logo { font-weight:bold; }
-
-.nav-menu { list-style:none; display:flex; gap:20px; }
-.nav-menu a { color:#fff; text-decoration:none; }
-
-#langToggle {
-  background:#fff;
-  border:none;
-  padding:5px 10px;
-  cursor:pointer;
+.logo {
+  font-weight: 700;
+  color: #fff;
 }
 
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   HERO
+   ========================= */
 .hero {
-  padding:80px 0;
-  background:#f5f7fa;
+  padding: 80px 0;
+  background: #f8fafc;
 }
 
 .hero-grid {
-  display:grid;
-  grid-template-columns: 1fr 300px;
-  gap:40px;
-  align-items:center;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
 }
 
-.profile-img {
-  width:100%;
-  border-radius:8px;
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.section { padding:60px 0; }
-.bg-light { background:#f9fafb; }
-.bg-dark { background:#0f172a; color:#fff; }
-
-.card { margin-top:20px; }
-
-.skills-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-}
-
-.skills-grid span {
-  background:#e5e7eb;
-  padding:10px;
-  text-align:center;
-}
-
-footer {
-  background:#0f172a;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-}
-
-/* ====== TYPOGRAPHY & SPACING UPGRADE ====== */
-h1 { font-size: 42px; margin-bottom: 10px; }
-h2 { font-size: 28px; margin-bottom: 20px; }
-h3 { font-size: 20px; margin-bottom: 10px; }
-
-p, li {
-  line-height: 1.7;
+.role {
   font-size: 16px;
+  color: #475569;
+  margin-bottom: 6px;
 }
 
-.section {
-  padding: 80px 0;
+.location {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
 }
 
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* HERO CTA */
+/* =========================
+   CTA BUTTON
+   ========================= */
 .cta {
-  margin-top: 25px;
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .btn-primary {
   background: #0f172a;
   color: #fff;
-  padding: 12px 22px;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 14px;
 }
 
 .btn-secondary {
   background: #e5e7eb;
-  color: #111827;
-  padding: 12px 22px;
-  border-radius: 6px;
+  color: #0f172a;
+  padding: 10px 18px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 14px;
 }
 
-.btn-primary:hover { opacity: 0.9; }
-.btn-secondary:hover { background: #d1d5db; }
-/* ===== CONTACT SECTION LINK FIX ===== */
-
-#contact a {
-  color: #93c5fd;          
-  text-decoration: underline;
-  font-weight: 500;
+.btn-primary:hover {
+  background: #020617;
 }
 
-#contact a:hover {
-  color: #bfdbfe;         
-  text-decoration: none;
+.btn-secondary:hover {
+  background: #d1d5db;
 }
 
-#skills .card {
-  margin-bottom: 20px;
+/* =========================
+   PROFILE IMAGE
+   ========================= */
+.profile-img {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== SKILL LEVEL BADGE ===== */
+/* =========================
+   SECTION
+   ========================= */
+section {
+  padding: 72px 0;
+}
 
-.skill-level {
-  font-size: 12px;
-  font-weight: 600;
-  margin-left: 10px;
+section h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   CARD (EXPERIENCE / SKILLS)
+   ========================= */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* =========================
+   SKILL LEVEL BADGE
+   ========================= */
+.badge {
+  display: inline-block;
   padding: 4px 10px;
   border-radius: 999px;
-  vertical-align: middle;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.level-daily {
-  background-color: #dcfce7;
+.badge.daily {
+  background: #dcfce7;
   color: #166534;
 }
 
-.level-advanced {
-  background-color: #dbeafe;
-  color: #1e40af;
+.badge.advanced {
+  background: #dbeafe;
+  color: #1e3a8a;
 }
 
-.level-working {
-  background-color: #fef3c7;
+.badge.working {
+  background: #fef3c7;
   color: #92400e;
 }
 
 /* =========================
-   LANGUAGE TOGGLE SWITCH
-========================= */
-
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #ffffff;
+   EDUCATION
+   ========================= */
+.education p {
+  font-size: 14px;
+  color: #334155;
 }
-
-/* Label ID / EN */
-.lang-label {
-  font-weight: 600;
-}
-
-/* Switch container */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 22px;
-}
-
-/* Hide checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* Slider background */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #475569; /* abu gelap */
-  border-radius: 999px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.3s;
-}
-
-/* Knob */
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-/* Checked = EN */
-.switch input:checked + .slider {
-  background-color: #2563eb; /* biru */
-}
-
-.switch input:checked + .slider::before {
-  transform: translateX(22px)
 
 /* =========================
-   MOBILE RESPONSIVE — FIX FINAL
-========================= */
+   FOOTER / CONTACT
+   ========================= */
+footer {
+  background: #0b1220;
+  color: #e5e7eb;
+  padding: 48px 0;
+  margin-top: 80px;
+}
 
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
 @media (max-width: 768px) {
 
-  /* GLOBAL */
-  body {
-    overflow-x: hidden;
+  .hero {
+    padding: 48px 0;
   }
 
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* NAVBAR */
-  .nav-flex {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-menu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    font-size: 14px;
-  }
-
-  .lang-toggle {
-    margin-left: auto;
-  }
-
-  @media (max-width: 768px) {
-
-  /* HERO FIX — WAJIB ADA .hero .hero-grid */
-  .hero .hero-grid {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-    align-items: center;
+  .hero-grid {
+    grid-template-columns: 1fr;
     text-align: center;
-    gap: 20px;
+    gap: 32px;
   }
 
-  .hero .hero-grid img {
-    max-width: 220px;
-    height: auto;
+  .profile-img {
+    width: 180px;
     margin: 0 auto;
   }
 
-  .hero .hero-grid h1 {
-    font-size: 26px;
-    line-height: 1.25;
-  }
-
-  .hero .role {
-    font-size: 15px;
-  }
-
-  .hero .location {
-    font-size: 14px;
-  }
-
-  .hero .cta {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-}
-
-  /* =========================
-   HERO MOBILE FIX (MATCH HTML)
-========================= */
-
-@media (max-width: 768px) {
-
-  /* FORCE hero jadi 1 kolom */
-  .hero-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Teks hero (div pertama) */
-  .hero-grid > div:first-child {
-    order: 2;
-    width: 100%;
-  }
-
-  /* Foto hero */
-  .profile-img {
-    order: 1;
-    max-width: 220px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  /* CTA */
   .cta {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
-

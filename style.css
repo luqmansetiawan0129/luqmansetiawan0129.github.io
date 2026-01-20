@@ -230,9 +230,18 @@ section h2 {
 }
 
 /* =========================
-   SKILLS (LOCKED STYLE)
+   SKILLS SECTION (FINAL)
    ========================= */
-.skills .skill-card {
+.skills {
+  background: #f8fafc;
+}
+
+.skills h2 {
+  font-size: 26px;
+  margin-bottom: 32px;
+}
+
+.skill-card {
   background: #ffffff;
   border-radius: 14px;
   padding: 24px;
@@ -240,26 +249,33 @@ section h2 {
   box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 
-.skills .skill-card h3 {
-  font-size: 15px;
-  margin-bottom: 6px;
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.skills .skill-card p {
+.skill-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.skill-card p {
   font-size: 14px;
   color: #334155;
+  line-height: 1.6;
 }
 
 /* =========================
    SKILL BADGES
    ========================= */
 .badge {
-  display: inline-block;
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 11px;
   font-weight: 600;
-  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .badge.daily {
@@ -275,6 +291,15 @@ section h2 {
 .badge.working {
   background: #fef3c7;
   color: #92400e;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+  .skill-header {
+    flex-wrap: wrap;
+  }
 }
 
 /* =========================
@@ -351,3 +376,4 @@ footer a:hover {
     padding: 48px 0;
   }
 }
+

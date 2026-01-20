@@ -229,5 +229,112 @@ p, li {
 .switch input:checked + .slider::before {
   transform: translateX(22px)
 
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Container */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* NAVBAR */
+  .nav-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+  }
+
+  /* HERO SECTION */
+  .hero-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-grid img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero-grid h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero-grid .role {
+    font-size: 15px;
+  }
+
+  .hero-grid .location {
+    font-size: 14px;
+  }
+
+  .cta {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* SECTION SPACING */
+  .section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* CARD (Experience & Skills) */
+  .card {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 14px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-content {
+    padding-left: 12px;
+  }
+
+  /* SKILL LEVEL BADGE */
+  .skill-level {
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 13px;
+    padding: 20px 10px;
+  }
+}
+
 
 

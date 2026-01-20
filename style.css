@@ -230,25 +230,35 @@ p, li {
   transform: translateX(22px)
 
 /* =========================
-   MOBILE RESPONSIVE FIX
+   MOBILE RESPONSIVE — FIX FINAL
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* Container */
+  /* GLOBAL */
+  body {
+    overflow-x: hidden;
+  }
+
   .container {
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   /* NAVBAR */
   .nav-flex {
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
   }
 
   .nav-menu {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
     font-size: 14px;
   }
 
@@ -256,22 +266,24 @@ p, li {
     margin-left: auto;
   }
 
-  /* HERO SECTION */
+  /* HERO — INI YANG TADI TIDAK KENA */
   .hero-grid {
-    display: flex;
-    flex-direction: column-reverse;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center;
     text-align: center;
     gap: 20px;
   }
 
   .hero-grid img {
     max-width: 220px;
+    height: auto;
     margin: 0 auto;
   }
 
   .hero-grid h1 {
-    font-size: 28px;
-    line-height: 1.2;
+    font-size: 26px;
+    line-height: 1.25;
   }
 
   .hero-grid .role {
@@ -283,22 +295,23 @@ p, li {
   }
 
   .cta {
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
-  /* SECTION SPACING */
+  /* SECTION */
   .section {
-    padding: 50px 0;
+    padding: 48px 0;
   }
 
   h2 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
-  /* CARD (Experience & Skills) */
+  /* CARD */
   .card {
     padding: 16px;
   }
@@ -314,14 +327,14 @@ p, li {
 
   /* TIMELINE */
   .timeline {
-    padding-left: 20px;
+    padding-left: 18px;
   }
 
   .timeline-content {
-    padding-left: 12px;
+    padding-left: 10px;
   }
 
-  /* SKILL LEVEL BADGE */
+  /* SKILL BADGE */
   .skill-level {
     display: inline-block;
     margin-top: 6px;
@@ -332,9 +345,6 @@ p, li {
   footer {
     text-align: center;
     font-size: 13px;
-    padding: 20px 10px;
+    padding: 20px 12px;
   }
 }
-
-
-

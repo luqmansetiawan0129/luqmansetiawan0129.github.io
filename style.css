@@ -47,7 +47,7 @@ body {
 
 .logo {
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 
 .nav-menu {
@@ -67,6 +67,58 @@ body {
 }
 
 /* =========================
+   LANGUAGE TOGGLE (ISOLATED)
+   ========================= */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #cbd5f5;
+}
+
+.lang-switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+}
+
+.lang-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.lang-slider {
+  position: absolute;
+  inset: 0;
+  background: #334155;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.lang-switch input:checked + .lang-slider {
+  background: #2563eb;
+}
+
+.lang-switch input:checked + .lang-slider::before {
+  transform: translateX(20px);
+}
+
+/* =========================
    HERO
    ========================= */
 .hero {
@@ -83,24 +135,22 @@ body {
 
 .hero h1 {
   font-size: 40px;
-  font-weight: 700;
   margin-bottom: 12px;
 }
 
 .role {
   font-size: 16px;
   color: #475569;
-  margin-bottom: 6px;
 }
 
 .location {
   font-size: 14px;
   color: #64748b;
-  margin-bottom: 20px;
+  margin: 12px 0 20px;
 }
 
 /* =========================
-   CTA BUTTON
+   CTA BUTTONS
    ========================= */
 .cta {
   display: flex;
@@ -109,7 +159,7 @@ body {
 
 .btn-primary {
   background: #0f172a;
-  color: #fff;
+  color: #ffffff;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
@@ -139,11 +189,11 @@ body {
 .profile-img {
   width: 260px;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 /* =========================
-   SECTION
+   SECTION GENERAL
    ========================= */
 section {
   padding: 72px 0;
@@ -155,14 +205,14 @@ section h2 {
 }
 
 /* =========================
-   CARD (EXPERIENCE / SKILLS)
+   EXPERIENCE CARDS
    ========================= */
 .card {
   background: #ffffff;
   border-radius: 14px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
 }
 
 .card h3 {
@@ -175,12 +225,33 @@ section h2 {
 }
 
 .card li {
-  margin-bottom: 8px;
   font-size: 14px;
+  margin-bottom: 8px;
 }
 
 /* =========================
-   SKILL LEVEL BADGE
+   SKILLS (LOCKED STYLE)
+   ========================= */
+.skills .skill-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+.skills .skill-card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.skills .skill-card p {
+  font-size: 14px;
+  color: #334155;
+}
+
+/* =========================
+   SKILL BADGES
    ========================= */
 .badge {
   display: inline-block;
@@ -215,13 +286,16 @@ section h2 {
 }
 
 /* =========================
-   FOOTER / CONTACT
+   FOOTER (ISOLATED)
    ========================= */
 footer {
   background: #0b1220;
   color: #e5e7eb;
-  padding: 48px 0;
-  margin-top: 80px;
+  padding: 40px 0;
+}
+
+footer .container {
+  padding: 0 24px;
 }
 
 footer a {
@@ -231,11 +305,6 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-footer p {
-  font-size: 14px;
-  margin-bottom: 6px;
 }
 
 .footer-bottom {
@@ -270,15 +339,15 @@ footer p {
     flex-wrap: wrap;
   }
 
-  section {
-    padding: 48px 0;
-  }
-
   .nav-menu {
     display: none;
   }
 
   .container {
     padding: 0 16px;
+  }
+
+  section {
+    padding: 48px 0;
   }
 }
